@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini-js-project</title>
+   <style>
+
+    *{
+        background-image: linear-gradient(to right,red,yellow);
+    }
+    .container{
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 200px;
+        background: white;
+        width: 50%;
+        margin-left: 20%;
+
+    }
+    #first{
+      width: 300px;  
+      padding: 10px;
+      border-radius: 20px;
+      background: white;
+    }
+    #last{
+        width: 300px;
+        padding: 10px;
+        border-radius: 20px;
+        background: white;
+    }
+    button{
+        background-image: linear-gradient(to right,red,yellow);
+        padding: 15px;
+        border-radius: 20px;
+    }
+    button:hover{
+        opacity: 0.6;
+        cursor: pointer;
+    }
+   </style>
+</head>
+<body>
+    <div class="container">
+    First Name: <input type="text" name="text" id="first">
+    <br><br>
+
+    last Name : <input type="text" name="text" id="last">
+    <br><br>
+
+    <button onclick="check()">Submit</button>
+    <br>
+    <br>
+    <h1 id="result"></h1>
+    </div>
+
+    <script type="text/javascript">
+        function check(){
+            var first_v=document.getElementById('first').value;
+            var second_v=document.getElementById('last').value;
+
+            var result=document.getElementById('result');
+
+            if(first_v==second_v)
+            {
+                result.innerHTML="The value is correct";
+            }
+            else{
+                result.innerHTML="The value is incorrect";
+            }
+        }
+    </script>
+</body>
+</html>
